@@ -95,6 +95,7 @@ class StateApp:
 
             #json.dump(jsonfile.__dict__, self.i)
         print(json.dumps(jsonfile.__dict__))
+        print(' this is a test')
         
     def sqfile(self):
         db = sqlite3.connect('myDB.db')
@@ -108,6 +109,8 @@ class StateApp:
         for row in cur.execute('Select * from test'):
             print(row)
         db.close()
+
+        # this is a test
 
 class Question:
     State = ' '
