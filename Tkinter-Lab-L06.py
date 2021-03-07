@@ -95,7 +95,7 @@ class StateApp:
 
             #json.dump(jsonfile.__dict__, self.i)
         print(json.dumps(jsonfile.__dict__))
-        print(' this is a test')
+   
         
     def sqfile(self):
         db = sqlite3.connect('myDB.db')
@@ -103,14 +103,16 @@ class StateApp:
 
         cur.execute("Drop table if exists datafile")
         cur.execute("create table datafile(string TEXT, question BOOLEAN, string2 TEXT, string3 TEXT)")
-        #cur.execute('insert into test(string, question, string2, string3) values ("self.combobox.get()", False, "sadasd", "Sdadww")')
-        cur.executemany('insert into datafile(string ,question, string2, string3) values (?,?,?,?),(self.combobox.get(), self.Check.get(), self.Radio.get(), self.text_comments.get())')
+        cur.execute('insert into test(string, question, string2, string3) values ("self.combobox.get()", False, "sadasd", "Sdadww")')
+        # cur.executemany('insert into datafile(string ,question, string2, string3) values (?,?,?,?),(self.combobox.get(), self.Check.get(), self.Radio.get(), self.text_comments.get())')
         
         for row in cur.execute('Select * from test'):
             print(row)
         db.close()
 
-        # this is a test
+    # I could not figure out how to export the right values for the sql file.
+
+
 
 class Question:
     State = ' '
