@@ -7,4 +7,4 @@
 - Checkbox
 - Combobox
 - Textbox
-- Submit formats: Terminal, JSON, SQLITE & FALTFILE
+- Submit formats: FLATFILE, JSON & SQLITE
